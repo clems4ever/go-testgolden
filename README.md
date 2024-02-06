@@ -12,6 +12,10 @@ primitives for creating and maintaining golden files, also called goldens.
 
 # Getting Started
 
+```bash
+go get github.com/clems4ever/go-testgolden
+```
+
 ```go
 type MyStruct struct {
 	ID      int
