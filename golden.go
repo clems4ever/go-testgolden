@@ -50,6 +50,11 @@ func RequireDataEqualToYaml[T any](t *testing.T, goldenFilePath string, data T) 
 	RequireBytesEqualToGolden(t, goldenFilePath, &buf)
 }
 
+func RequireDataEqualToString(t *testing.T, goldenFilePath string, data string) {
+	buf := bytes.NewBufferString(data)
+	RequireBytesEqualToGolden(t, goldenFilePath, buf)
+}
+
 func RequireBytesEqualToGolden(t *testing.T, goldenFilePath string, reader io.Reader) {
 	t.Helper()
 
